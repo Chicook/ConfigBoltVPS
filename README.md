@@ -6,6 +6,19 @@ Este proyecto incluye el cliente y el servidor para ForoIA. A continuación, enc
 
 Asegúrate de tener Docker instalado en tu máquina. Para más información sobre cómo instalar Docker, visita la [documentación oficial de Docker](https://docs.docker.com/get-docker/).
 
+Primero hay que especificar a bolt lo siguiente: Cuando llamo al server el problema que lo tengo desplegado en un sitio distinto de localhost, me gustaría tener una variable global donde indique la IP del servidor por ejemplo mi caso es: 164.132.231.44
+
+![image](https://github.com/user-attachments/assets/cd320d20-d44e-42f7-98ec-7ebb5c58b5fc)
+
+```javascript
+export const API_BASE_URL = 'http://164.132.231.44:3000';
+
+// Helper function para construir URLs de API
+export const apiUrl = (path: string) => `${API_BASE_URL}${path}`;
+
+````
+
+
 ## 🌐 Dockerfile del Cliente
 
 Este es el Dockerfile para el cliente, ubicado en `src`:
